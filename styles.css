@@ -1,0 +1,85 @@
+html,
+body {
+	min-height: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+main.container {
+  	width: 100%;
+  	max-width: 100%;
+}
+
+.pages {
+  	position: relative;
+  	width: 100%;
+  	z-index: 0;
+}
+
+.page {
+  padding: 4.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  visibility: hidden;
+  z-index: 1;
+  background-color: white;
+}
+
+.x {
+	background-color: lightpink;
+}
+
+.y {
+	background-color: lightblue;
+}
+
+.z {
+	background-color: lightseagreen;
+}
+
+.w {
+	background-color: lightgreen;
+}
+
+.u {
+	background-color: blue;
+}
+
+.page.prev {
+  	visibility: visible;
+  	position: static;
+  	z-index: 1;
+}
+
+.page.active {
+  	visibility: visible;
+  	position:relative;
+  	z-index: 3;
+}
+
+.page.fixed {
+	visibility: visible;
+  	position: fixed;
+  	z-index: 2;
+}
+
+.footer {
+	height: 100%;
+  	width: 100%;
+  	min-height: 100vh; /*slighlty bigger to force scroll!*/
+}
+
+.footer > .row {
+  	margin-bottom:0;
+}
+
+@media (min-width:400px) {
+    .page.fixed {
+    	position: fixed;
+    }
+}
